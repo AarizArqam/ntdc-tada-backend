@@ -31,8 +31,8 @@ public class accomodationController {
 		return new ResponseEntity<accomodation>(accomodationService.saveAccomodation(acc),HttpStatus.CREATED);
 	}
 	@GetMapping("/dev/v1/api/ta-da/getAccomodation")
-	public List<accomodation> getAllAccomodation(){
-		return accomodationService.findAllAccomodations();
+	public String getAllAccomodation(){
+		return "hello World";//accomodationService.findAllAccomodations();
 	}
 	@GetMapping("/dev/v1/api/ta-da/getAccomodation/{journeyId}")
 	public Optional<accomodation> getAllAccomodation(@PathVariable("journeyId") int id){
