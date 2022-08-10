@@ -9,14 +9,13 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Tour")
-public class tour {
-
+@Table(name="stay")
+public class stay {
 	@Id
-	@Column(name="taxiId")
+	@Column(name="stayId")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="id_sequence")
 	@SequenceGenerator(name="id_sequence",sequenceName ="ID_SEQ")
-	long id;
+	long stayId; // primary key----Auto increment
 	
 	@Column(name="tourId")
 	int tourId;
@@ -24,84 +23,111 @@ public class tour {
 	@Column(name="description")
 	String description;
 	
-	@Column(name="killometer")
-	int killometer;
+	@Column(name="fromDate")
+	String fDate;
 	
-	@Column(name="rate")
-	int rate;
+	@Column(name="toDate")
+	String tDate;
+	
+	@Column(name="days")
+	int days;
+	
+	@Column(name="daily")
+	int daily;
 	
 	@Column(name="total")
 	int total;
 	
-	@Column(name="departurFlag")
-	int departureFlag;
-	
 	@Column(name="journeyId")
 	int journeyId;
 
-	public tour() {
-		super();
-	}
 	
-
-	public tour(String description, int killometer, int rate,int total) {
+	
+	public stay(int tourId, String description, String fDate, String tDate, int days, int daily, int total,
+			int journeyId) {
 		super();
-		this.tourId=0;
+		this.tourId = tourId;
 		this.description = description;
-		this.killometer = killometer;
-		this.rate = rate;
-		this.total=total;
+		this.fDate = fDate;
+		this.tDate = tDate;
+		this.days = days;
+		this.daily = daily;
+		this.total = total;
+		this.journeyId = journeyId;
 	}
-	
-	
-	public long getId() {
-		return id;
+	public stay() {
+		super();
 	}
+	public long getStayId() {
+		return stayId;
+	}
+
 	public int getTourId() {
 		return tourId;
 	}
+
 	public String getDescription() {
 		return description;
 	}
-	public int getKillometer() {
-		return killometer;
+
+	public String getfDate() {
+		return fDate;
 	}
-	public int getRate() {
-		return rate;
+
+	public String gettDate() {
+		return tDate;
 	}
+
+	public int getDays() {
+		return days;
+	}
+
+	public int getDaily() {
+		return daily;
+	}
+
 	public int getTotal() {
 		return total;
 	}
-	public int getDepartureFlag() {
-		return departureFlag;
-	}
+
 	public int getJourneyId() {
 		return journeyId;
 	}
-	public void setId(long id) {
-		this.id = id;
+
+	public void setStayId(long stayId) {
+		this.stayId = stayId;
 	}
+
 	public void setTourId(int tourId) {
 		this.tourId = tourId;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public void setKillometer(int killometer) {
-		this.killometer = killometer;
+
+	public void setfDate(String fDate) {
+		this.fDate = fDate;
 	}
-	public void setRate(int rate) {
-		this.rate = rate;
+
+	public void settDate(String tDate) {
+		this.tDate = tDate;
 	}
+
+	public void setDays(int days) {
+		this.days = days;
+	}
+
+	public void setDaily(int daily) {
+		this.daily = daily;
+	}
+
 	public void setTotal(int total) {
 		this.total = total;
 	}
-	public void setDepartureFlag(int departureFlag) {
-		this.departureFlag = departureFlag;
-	}
+
 	public void setJourneyId(int journeyId) {
 		this.journeyId = journeyId;
 	}
-	
 	
 }

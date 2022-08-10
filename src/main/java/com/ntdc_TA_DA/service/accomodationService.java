@@ -10,4 +10,6 @@ public interface accomodationService {
 	Optional<accomodation> findAllAccomodationById(long id);
 	List<accomodation> findAllAccomodations();
 	void DeleteAccomodationById(long id);
+	List<accomodation> findAllAccomodationBytourId(int tourId);
+	void updateAccomodation(long accId,accomodation acc);
 }

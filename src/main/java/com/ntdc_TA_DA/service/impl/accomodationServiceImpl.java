@@ -46,6 +46,20 @@ public class accomodationServiceImpl implements accomodationService{
 		accomodationRepo.deleteById(id);
 		
 	}
+
+
+	@Override
+	public List<accomodation> findAllAccomodationBytourId(int tourId) {
+		return accomodationRepo.findBytourId(tourId);
+		
+	}
+
+
+	@Override
+	public void updateAccomodation(long accId,accomodation acc) {
+		
+		
+	}
 	
 	
 

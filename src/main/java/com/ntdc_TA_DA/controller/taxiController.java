@@ -9,26 +9,26 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ntdc_TA_DA.model.tour;
-import com.ntdc_TA_DA.service.tourService;
+import com.ntdc_TA_DA.model.taxi;
+import com.ntdc_TA_DA.service.taxiService;
 
 @RestController
-public class tourController {
-	private tourService Service;
+public class taxiController {
+	private taxiService Service;
 	
-	public tourController(tourService service) {
+	public taxiController(taxiService service) {
 		super();
 		Service = service;
 	}
 	
 	@GetMapping("/dev/v1/api/ta-da/getTour")
-	public List<tour> getAllTours(){
+	public List<taxi> getAllTours(){
 		return Service.findAllTour();
 	}
 	
 	
 	@PostMapping("/dev/v1/api/ta-da/addTour")
-	public void addTour(@RequestBody tour Tour) {
+	public void addTour(@RequestBody taxi Tour) {
 		Service.saveTour(Tour);
 	}
 	@DeleteMapping("/dev/v1/api/ta-da/deleteTour/{tourId}")

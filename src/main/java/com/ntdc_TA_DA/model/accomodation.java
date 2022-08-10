@@ -13,10 +13,10 @@ import javax.persistence.Table;
 
 public class accomodation {
 	@Id
-	@Column(name="stayId")
+	@Column(name="accomodationId")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="id_sequence")
 	@SequenceGenerator(name="id_sequence",sequenceName ="ID_SEQ")
-	long stayId; // primary key----Auto increment
+	long accomodationId; // primary key----Auto increment
 	
 	@Column(name="tourId")
 	int tourId;
