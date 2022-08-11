@@ -9,7 +9,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tour")
+@Table(name="Tour")
 public class tour {
 	@Id
 	@Column(name="tourid")
@@ -17,74 +17,74 @@ public class tour {
 	@SequenceGenerator(name="id_sequence",sequenceName ="ID_SEQ")
 	int tourid;
 	
-	@Column(name="approved_flag")
-	int approved_flag;
+	@Column(name="approvedflag")
+	int approvedflag;
 	
-	@Column(name="hris_id")
-	int hris_id;
+	@Column(name="hrisId")
+	int hrisId;
 	
-	@Column(name="emp_name")
-	String emp_name;
+	@Column(name="empName")
+	String empName;
 	
-	@Column(name="tour_subject")
-	String tour_subject;
+	@Column(name="tourSubject")
+	String tourSubject;
 	
-	@Column(name="tour_request")
-	String tour_request;
+	@Column(name="tourRequest")
+	String tourRequest;
 	
-	@Column(name="date_from")
-	String date_from;
+	@Column(name="dateFrom")
+	String dateFrom;
 	
-	@Column(name="date_to")
-	String date_to;
+	@Column(name="dateTo")
+	String dateTo;
 	
-	@Column(name="tour_station")
-	int tour_station;
+	@Column(name="tourStation")
+	int tourStation;
 	
-	@Column(name="approved_hris_id")
-	int approved_hris_id;
+	@Column(name="approvedHrisId")
+	int approvedHrisId;
 	
-	@Column(name="approved_by")
-	String approved_by;
+	@Column(name="approvedBy")
+	String approvedBy;
 	
-	@Column(name="approved_date")
-	String approved_date;
+	@Column(name="approvedDate")
+	String approvedDate;
 	
-	@Column(name="toll_amount")
-	int toll_amount;
+	@Column(name="tollAmount")
+	int tollAmount;
 	
-	@Column(name="tour_reason")
-	String tour_reason;
+	@Column(name="tourReason")
+	String tourReason;
 	
 	@Column(name="comments")
 	String comments;//` mediumtext,
 	
-	@Column(name="grand_total")
-	int grand_total;//` int DEFAULT NULL,
+	@Column(name="grandTotal")
+	int grandTotal;//` int DEFAULT NULL,
 	
-	@Column(name="created_by")
-	int created_by;//` int DEFAULT NULL,
+	@Column(name="createdBy")
+	int createdBy;//` int DEFAULT NULL,
 	
-	@Column(name="currently_assigned_hris")
-	int currently_assigned_hris;//` int DEFAULT NULL,
+	@Column(name="currentlyAssignedHris")
+	int currentlyAssignedHris;//` int DEFAULT NULL,
 	
 	@Column(name="sender")
 	int sender;//` int DEFAULT NULL,
 	
-	@Column(name="created_on")
-	String created_on;//` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+	@Column(name="createdOn")
+	String createdOn;//` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
 	
-	@Column(name="_final")
-	int _final;//` tinyint DEFAULT '0',
+	@Column(name="final1")
+	int final1;//` tinyint DEFAULT '0',
 	
-	@Column(name="advance_amount")
-	int advance_amount;//` int DEFAULT '0',
+	@Column(name="advanceAmount")
+	int advanceAmount;//` int DEFAULT '0',
 	
-	@Column(name="advance_desc")
-	String advance_desc;//` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT '',
+	@Column(name="advanceDesc")
+	String advanceDesc;//` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT '',
 	
-	@Column(name="tour_type")
-	int tour_type;//` int DEFAULT '1' COMMENT '1 for local, 2 for international',
+	@Column(name="tourType")
+	int tourType;//` int DEFAULT '1' COMMENT '1 for local, 2 for international',
 
 	public tour() {
 		super();
@@ -94,205 +94,205 @@ public class tour {
 		return tourid;
 	}
 
-	public tour(int hris_id, String emp_name, String tour_subject, String date_from, String date_to, int tour_station,
-			String comments, int tour_type) {
+	public tour(int hrisId, String empName, String tourSubject, String dateFrom, String dateTo, int tourStation,
+			String comments, int tourType) {
 		super();
-		this.hris_id = hris_id;
-		this.emp_name = emp_name;
-		this.tour_subject = tour_subject;
-		this.date_from = date_from;
-		this.date_to = date_to;
-		this.tour_station = tour_station;
+		this.hrisId = hrisId;
+		this.empName = empName;
+		this.tourSubject = tourSubject;
+		this.dateFrom = dateFrom;
+		this.dateTo = dateTo;
+		this.tourStation = tourStation;
 		this.comments = comments;
-		this.tour_type = tour_type;
+		this.tourType = tourType;
 	}
 
-	public int getApproved_flag() {
-		return approved_flag;
+	public int getapprovedflag() {
+		return approvedflag;
 	}
 
-	public int getHris_id() {
-		return hris_id;
+	public int gethrisId() {
+		return hrisId;
 	}
 
-	public String getEmp_name() {
-		return emp_name;
+	public String getempName() {
+		return empName;
 	}
 
-	public String getTour_subject() {
-		return tour_subject;
+	public String gettourSubject() {
+		return tourSubject;
 	}
 
-	public String getTour_request() {
-		return tour_request;
+	public String gettourRequest() {
+		return tourRequest;
 	}
 
-	public String getDate_from() {
-		return date_from;
+	public String getdateFrom() {
+		return dateFrom;
 	}
 
-	public String getDate_to() {
-		return date_to;
+	public String getdateTo() {
+		return dateTo;
 	}
 
-	public int getTour_station() {
-		return tour_station;
+	public int gettourStation() {
+		return tourStation;
 	}
 
-	public int getApproved_hris_id() {
-		return approved_hris_id;
+	public int getapprovedHrisId() {
+		return approvedHrisId;
 	}
 
-	public String getApproved_by() {
-		return approved_by;
+	public String getapprovedBy() {
+		return approvedBy;
 	}
 
-	public String getApproved_date() {
-		return approved_date;
+	public String getapprovedDate() {
+		return approvedDate;
 	}
 
-	public int getToll_amount() {
-		return toll_amount;
+	public int gettollAmount() {
+		return tollAmount;
 	}
 
-	public String getTour_reason() {
-		return tour_reason;
+	public String gettourReason() {
+		return tourReason;
 	}
 
 	public String getComments() {
 		return comments;
 	}
 
-	public int getGrand_total() {
-		return grand_total;
+	public int getgrandTotal() {
+		return grandTotal;
 	}
 
-	public int getCreated_by() {
-		return created_by;
+	public int getcreatedBy() {
+		return createdBy;
 	}
 
-	public int getCurrently_assigned_hris() {
-		return currently_assigned_hris;
+	public int getcurrentlyAssignedHris() {
+		return currentlyAssignedHris;
 	}
 
 	public int getSender() {
 		return sender;
 	}
 
-	public String getCreated_on() {
-		return created_on;
+	public String getcreatedOn() {
+		return createdOn;
 	}
 
-	public int get_final() {
-		return _final;
+	public int getfinal1() {
+		return final1;
 	}
 
-	public int getAdvance_amount() {
-		return advance_amount;
+	public int getadvanceAmount() {
+		return advanceAmount;
 	}
 
-	public String getAdvance_desc() {
-		return advance_desc;
+	public String getadvanceDesc() {
+		return advanceDesc;
 	}
 
-	public int getTour_type() {
-		return tour_type;
+	public int gettourType() {
+		return tourType;
 	}
 
 	public void setTourid(int tourid) {
 		this.tourid = tourid;
 	}
 
-	public void setApproved_flag(int approved_flag) {
-		this.approved_flag = approved_flag;
+	public void setapprovedflag(int approvedflag) {
+		this.approvedflag = approvedflag;
 	}
 
-	public void setHris_id(int hris_id) {
-		this.hris_id = hris_id;
+	public void sethrisId(int hrisId) {
+		this.hrisId = hrisId;
 	}
 
-	public void setEmp_name(String emp_name) {
-		this.emp_name = emp_name;
+	public void setempName(String empName) {
+		this.empName = empName;
 	}
 
-	public void setTour_subject(String tour_subject) {
-		this.tour_subject = tour_subject;
+	public void settourSubject(String tourSubject) {
+		this.tourSubject = tourSubject;
 	}
 
-	public void setTour_request(String tour_request) {
-		this.tour_request = tour_request;
+	public void settourRequest(String tourRequest) {
+		this.tourRequest = tourRequest;
 	}
 
-	public void setDate_from(String date_from) {
-		this.date_from = date_from;
+	public void setdateFrom(String dateFrom) {
+		this.dateFrom = dateFrom;
 	}
 
-	public void setDate_to(String date_to) {
-		this.date_to = date_to;
+	public void setdateTo(String dateTo) {
+		this.dateTo = dateTo;
 	}
 
-	public void setTour_station(int tour_station) {
-		this.tour_station = tour_station;
+	public void settourStation(int tourStation) {
+		this.tourStation = tourStation;
 	}
 
-	public void setApproved_hris_id(int approved_hris_id) {
-		this.approved_hris_id = approved_hris_id;
+	public void setapprovedHrisId(int approvedHrisId) {
+		this.approvedHrisId = approvedHrisId;
 	}
 
-	public void setApproved_by(String approved_by) {
-		this.approved_by = approved_by;
+	public void setapprovedBy(String approvedBy) {
+		this.approvedBy = approvedBy;
 	}
 
-	public void setApproved_date(String approved_date) {
-		this.approved_date = approved_date;
+	public void setapprovedDate(String approvedDate) {
+		this.approvedDate = approvedDate;
 	}
 
-	public void setToll_amount(int toll_amount) {
-		this.toll_amount = toll_amount;
+	public void settollAmount(int tollAmount) {
+		this.tollAmount = tollAmount;
 	}
 
-	public void setTour_reason(String tour_reason) {
-		this.tour_reason = tour_reason;
+	public void settourReason(String tourReason) {
+		this.tourReason = tourReason;
 	}
 
 	public void setComments(String comments) {
 		this.comments = comments;
 	}
 
-	public void setGrand_total(int grand_total) {
-		this.grand_total = grand_total;
+	public void setgrandTotal(int grandTotal) {
+		this.grandTotal = grandTotal;
 	}
 
-	public void setCreated_by(int created_by) {
-		this.created_by = created_by;
+	public void setcreatedBy(int createdBy) {
+		this.createdBy = createdBy;
 	}
 
-	public void setCurrently_assigned_hris(int currently_assigned_hris) {
-		this.currently_assigned_hris = currently_assigned_hris;
+	public void setcurrentlyAssignedHris(int currentlyAssignedHris) {
+		this.currentlyAssignedHris = currentlyAssignedHris;
 	}
 
 	public void setSender(int sender) {
 		this.sender = sender;
 	}
 
-	public void setCreated_on(String created_on) {
-		this.created_on = created_on;
+	public void setcreatedOn(String createdOn) {
+		this.createdOn = createdOn;
 	}
 
-	public void set_final(int _final) {
-		this._final = _final;
+	public void setfinal1(int final1) {
+		this.final1 = final1;
 	}
 
-	public void setAdvance_amount(int advance_amount) {
-		this.advance_amount = advance_amount;
+	public void setadvanceAmount(int advanceAmount) {
+		this.advanceAmount = advanceAmount;
 	}
 
-	public void setAdvance_desc(String advance_desc) {
-		this.advance_desc = advance_desc;
+	public void setadvanceDesc(String advanceDesc) {
+		this.advanceDesc = advanceDesc;
 	}
 
-	public void setTour_type(int tour_type) {
-		this.tour_type = tour_type;
+	public void settourType(int tourType) {
+		this.tourType = tourType;
 	}
 
 }

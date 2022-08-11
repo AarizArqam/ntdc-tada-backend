@@ -25,7 +25,7 @@ public class tourServiceImpl implements tourService {
 
 	@Override
 	public List<tour> findAlltourById(int hrisId) {
-		return tourRepo.findTourByhris_id(hrisId);
+		return tourRepo.findTourByhrisId(hrisId);
 	}
 
 	@Override
