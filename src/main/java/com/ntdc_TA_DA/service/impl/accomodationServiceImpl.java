@@ -57,8 +57,8 @@ public class accomodationServiceImpl implements accomodationService{
 
 	@Override
 	public void updateAccomodation(long accId,accomodation acc) {
-		
-		
+		acc.setId(accId);
+		accomodationRepo.save(acc);
 	}
 	
 	

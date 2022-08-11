@@ -21,18 +21,18 @@ public class taxiController {
 		Service = service;
 	}
 	
-	@GetMapping("/dev/v1/api/ta-da/getTour")
-	public List<taxi> getAllTours(){
+	@GetMapping("/dev/v1/api/ta-da/getTaxi")
+	public List<taxi> getAllTaxi(){
 		return Service.findAllTour();
 	}
 	
 	
-	@PostMapping("/dev/v1/api/ta-da/addTour")
-	public void addTour(@RequestBody taxi Tour) {
+	@PostMapping("/dev/v1/api/ta-da/addTaxi")
+	public void addTaxi(@RequestBody taxi Tour) {
 		Service.saveTour(Tour);
 	}
-	@DeleteMapping("/dev/v1/api/ta-da/deleteTour/{tourId}")
-	public void deleteTourById(@PathVariable("tourId") long id) {
+	@DeleteMapping("/dev/v1/api/ta-da/deleteTaxi/{tourId}")
+	public void deleteTaxiById(@PathVariable("tourId") long id) {
 		Service.DeleteTourById(id);
 	}
 }

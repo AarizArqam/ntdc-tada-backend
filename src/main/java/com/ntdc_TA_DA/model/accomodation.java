@@ -78,7 +78,7 @@ public class accomodation {
 
 		public accomodation(long sid,int tid,int jid,String DA,String FD,String TD,int day,long Rate,int Daily,int tot,String Desc){
 			super();
-			this.stayId=sid;
+			this.accomodationId=sid;
 			this.tourId=tid;
 			this.journeyId=jid;
 			this.departureArrival=DA;
@@ -92,11 +92,11 @@ public class accomodation {
 		}
 
 	public Long getStayId() {
-		return stayId;
+		return accomodationId;
 	}
 
 	public void setStayId(long stayId) {
-		this.stayId = stayId;
+		this.accomodationId = stayId;
 	}
 
 	public int getTourId() {
@@ -134,7 +134,7 @@ public class accomodation {
 	
 //Setter
 	public void setId(long id) {
-		this.stayId = id;
+		this.accomodationId = id;
 	}
 
 	public void setDepartureArrival(String data) {
@@ -167,7 +167,7 @@ public class accomodation {
 	}
 
 	public Long getId() {
-		return this.stayId;
+		return this.accomodationId;
 	}
 
 	public String getFromDate() {

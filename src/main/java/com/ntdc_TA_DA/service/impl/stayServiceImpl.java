@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 import com.ntdc_TA_DA.model.stay;
 import com.ntdc_TA_DA.repository.stayRepository;
+import com.ntdc_TA_DA.repository.taxiRepository;
 import com.ntdc_TA_DA.service.stayService;
 
 
@@ -12,6 +13,10 @@ import com.ntdc_TA_DA.service.stayService;
 public class stayServiceImpl implements stayService {
 
 	private stayRepository stayRepo;
+	public stayServiceImpl(stayRepository StayRepo) {
+		super();
+		this.stayRepo = StayRepo;
+	}
 	@Override
 	public void saveStay(stay Stay) {
 		// TODO Auto-generated method stub
