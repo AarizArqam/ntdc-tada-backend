@@ -60,6 +60,14 @@ public class accomodationServiceImpl implements accomodationService{
 		acc.setId(accId);
 		accomodationRepo.save(acc);
 	}
+
+
+	@Override
+	public void DeleteAccomodationByTourId(long id) {
+		// TODO Auto-generated method stub
+		accomodationRepo.deleteAllBytourId(id);
+		
+	}
 	
 	
 

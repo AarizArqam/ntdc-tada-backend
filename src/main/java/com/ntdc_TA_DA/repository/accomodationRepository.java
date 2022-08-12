@@ -8,5 +8,5 @@ import com.ntdc_TA_DA.model.accomodation;
 
 public interface accomodationRepository extends JpaRepository<accomodation,Long>{
 	List<accomodation> findBytourId(int tourId);
-
+	void deleteAllBytourId(long tourId);
 }

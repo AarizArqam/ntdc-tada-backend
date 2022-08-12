@@ -12,4 +12,5 @@ public interface accomodationService {
 	void DeleteAccomodationById(long id);
 	List<accomodation> findAllAccomodationBytourId(int tourId);
 	void updateAccomodation(long accId,accomodation acc);
+	void DeleteAccomodationByTourId(long id);
 }

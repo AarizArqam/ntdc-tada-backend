@@ -8,4 +8,5 @@ import com.ntdc_TA_DA.model.stay;
 
 public interface stayRepository extends JpaRepository<stay,Long>{
 	List<stay> findBytourId(int tourId);
+	void deleteAllBytourId(int tourId);
 }

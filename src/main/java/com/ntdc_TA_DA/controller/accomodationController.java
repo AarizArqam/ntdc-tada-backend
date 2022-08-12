@@ -39,8 +39,12 @@ public class accomodationController {
 	public List<accomodation> getAllAccomodation(@PathVariable("tourId") int tourId){
 		return accomodationService.findAllAccomodationBytourId(tourId);
 	}
-	@DeleteMapping("/dev/v1/api/ta-da/deleteAccomodation/{accId}")
+	/*@DeleteMapping("/dev/v1/api/ta-da/deleteAccomodation/{accId}")
 	public void deleteAccomodationById(@PathVariable("accId") long accId){
 		accomodationService.DeleteAccomodationById(accId);
+	}*/
+	@DeleteMapping("/dev/v1/api/ta-da/deleteAccomodation/{tourId}")
+	public void deleteAccomodationById(@PathVariable("tourId") long Id){
+		accomodationService.DeleteAccomodationByTourId(Id);
 	}
 }

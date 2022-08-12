@@ -18,9 +18,10 @@ public class stayServiceImpl implements stayService {
 		this.stayRepo = StayRepo;
 	}
 	@Override
-	public void saveStay(stay Stay) {
+	public stay saveStay(stay Stay) {
 		// TODO Auto-generated method stub
 		stayRepo.save(Stay);
+		return Stay;
 	}
 
 	@Override
@@ -43,5 +44,10 @@ public class stayServiceImpl implements stayService {
 	@Override
 	public List<stay> findStayBytourId(int tourId) {
 		return stayRepo.findBytourId(tourId);
+	}
+	@Override
+	public void DeleteStayBytourId(int tourId) {
+		// TODO Auto-generated method stub
+		stayRepo.deleteAllBytourId(tourId);
 	}
 }

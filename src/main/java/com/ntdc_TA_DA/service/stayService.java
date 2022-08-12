@@ -5,9 +5,10 @@ import java.util.Optional;
 import com.ntdc_TA_DA.model.stay;
 
 public interface stayService {
-	void saveStay(stay Stay);
+	stay saveStay(stay Stay);
 	Optional<stay> findAllStayById(long id);
 	List<stay> findAllStay();
 	void DeleteStayById(long id);
 	List<stay> findStayBytourId(int tourId);
+	void DeleteStayBytourId(int tourId);
 }
