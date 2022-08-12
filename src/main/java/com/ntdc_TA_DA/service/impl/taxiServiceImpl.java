@@ -21,23 +21,23 @@ public class taxiServiceImpl implements taxiService {
 	}
 
 	@Override
-	public void saveTour(taxi t) {
+	public void saveTaxi(taxi t) {
 		taxiRepo.save(t);
 		
 	}
 
 	@Override
-	public Optional<taxi> findAllTourById(long id) {
+	public Optional<taxi> findAllTaxiById(long id) {
 		return taxiRepo.findById(id);
 	}
 
 	@Override
-	public List<taxi> findAllTour() {
+	public List<taxi> findAllTaxi() {
 		return taxiRepo.findAll();
 	}
 
 	@Override
-	public void DeleteTourById(long id) {
+	public void DeleteTaxiById(long id) {
 		taxiRepo.deleteById(id);
 		
 	}
