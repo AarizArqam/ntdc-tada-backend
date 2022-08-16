@@ -31,7 +31,7 @@ private tourService Service;
 		return Service.findAlltourById(hrisId);
 	}
 	@DeleteMapping("/dev/v1/api/ta-da/deleteTour/{tourId}")
-	public void DeleteTour(@PathVariable int id) {
+	public void DeleteTour(@PathVariable("tourId") int id) {
 		
 		Service.DeleteTourBytourId(id);
 	}

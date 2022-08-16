@@ -107,6 +107,38 @@ public class tour {
 		this.tourType = tourType;
 	}
 
+	public tour(int tourid, int approvedflag, int hrisId, String empName, String tourSubject, String tourRequest,
+			String dateFrom, String dateTo, int tourStation, int approvedHrisId, String approvedBy, String approvedDate,
+			int tollAmount, String tourReason, String comments, int grandTotal, int createdBy,
+			int currentlyAssignedHris, int sender, String createdOn, int final1, int advanceAmount, String advanceDesc,
+			int tourType) {
+		super();
+		this.tourid = tourid;
+		this.approvedflag = approvedflag;
+		this.hrisId = hrisId;
+		this.empName = empName;
+		this.tourSubject = tourSubject;
+		this.tourRequest = tourRequest;
+		this.dateFrom = dateFrom;
+		this.dateTo = dateTo;
+		this.tourStation = tourStation;
+		this.approvedHrisId = approvedHrisId;
+		this.approvedBy = approvedBy;
+		this.approvedDate = approvedDate;
+		this.tollAmount = tollAmount;
+		this.tourReason = tourReason;
+		this.comments = comments;
+		this.grandTotal = grandTotal;
+		this.createdBy = createdBy;
+		this.currentlyAssignedHris = currentlyAssignedHris;
+		this.sender = sender;
+		this.createdOn = createdOn;
+		this.final1 = final1;
+		this.advanceAmount = advanceAmount;
+		this.advanceDesc = advanceDesc;
+		this.tourType = tourType;
+	}
+
 	public int getapprovedflag() {
 		return approvedflag;
 	}
